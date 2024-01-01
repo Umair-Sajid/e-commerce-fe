@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,11 @@ const SignUpPage = () => {
     // Add your sign-up logic here
     console.log("Form submitted:", formData);
     // You can make an API call or perform other actions for sign-up
+    setFormData({
+      name: "",
+      email: "",
+      password: "",
+    });
   };
 
   return (
@@ -77,6 +83,14 @@ const SignUpPage = () => {
             Sign Up
           </button>
         </form>
+
+        {/* "Sign In" button with a Link to the login page */}
+        <div className="mt-4 text-center">
+          <p className="text-gray-700">Already have an account?</p>
+          <Link to="/login" className="text-blue-500 font-semibold">
+            Sign In
+          </Link>
+        </div>
       </div>
     </div>
   );

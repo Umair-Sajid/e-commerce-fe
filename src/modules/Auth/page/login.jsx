@@ -72,7 +72,7 @@ const LoginPage = () => {
               onClick={formik.handleSubmit}
               className="bg-gradient-to-br from-blue-500 via-orange-400 to-yellow-300 text-white p-3 rounded-md hover:shadow-md focus:outline-none focus:ring focus:border-indigo-300 transition duration-300"
             >
-              Login
+              Signin
             </button>
           </form>
         </div>

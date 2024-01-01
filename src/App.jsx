@@ -6,14 +6,14 @@ import ProductCreatePage from "./modules/Product/page/create";
 import NotFoundPage from "./page/notFound";
 import IntroductionPage from "./page/introPage";
 import SignUpPage from "./modules/Auth/page/signup";
-
+import ProductsPage from "./modules/Product/page/index";
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/product/index" element={<ProductIndexPage />} />
-      <Route path="/product/create" element={<ProductCreatePage />} />
+      <Route path="/product/index" element={<ProductsPage />} />
+      {/* <Route path="/product/create" element={<ProductCreatePage />} /> */}
       <Route path="/" element={<AdminLayout />}>
         <Route index element={<IntroductionPage />} />
         {/* Add more nested routes within AdminLayout if needed */}
